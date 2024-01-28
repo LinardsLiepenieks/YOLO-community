@@ -1,0 +1,30 @@
+/*navbar*/
+.navbar-position {
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+}
+.navbar {
+	padding: 10px;
+	background-color: transparent;
+	display: flex;
+}
+
+.navbar-collapse {
+	display: flex;
+	flex-grow: 1;
+	justify-content: end;
+	align-items: center;
+}
+.navbar-nav {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	box-sizing: border-box;
+}
+/*nav-item*/
+.navbar-brand {
+}
+.nav-item {
+	text-align: center;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--global css-->
+		{%load static%}
+
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{% static 'shared/css/main.css'%}" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{% static 'shared/css/navbar.css'%}" />
+		<!---page css-->
+		{%block page_css%}{%endblock%}
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{% block title %}My Site{% endblock %}</title>
+	</head>
+	<body>
+		<nav class="navbar-position">
+			<div class="navbar">
+				<a class="navbar-brand" href="#">Navbar</a>
+				<div class="navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Par mums</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Pieslēgties</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Reģistrēties</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		{%block content%}{%endblock%}
+
+		<!---jquery-->
+		<script src="{% static 'shared/js/jquery-3.7.1.min.js' %}"></script>
+
+		{%block page_js%}{%endblock%}
+	</body>
+</html>

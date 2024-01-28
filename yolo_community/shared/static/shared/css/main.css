@@ -1,0 +1,35 @@
+:root {
+	/*salikt css mainīgos*/
+	--color-main: #404145;
+	--color-alt: #fbffff;
+	--color-accent: #a1d0e9;
+	--color-accent-alt: #e79625;
+
+	-fs-xxxxl: 3.815rem;
+	--fs-xxxl: 3.052rem;
+	--fs-xxl: 2.441rem;
+	--fs-xl: 1.953rem;
+	--fs-lg: 1.563rem;
+	--fs-m: 1.25rem;
+	--fs-sm: 1rem;
+}
+body {
+	font-family: sans-serif;
+	height: 100vh;
+	margin: 0;
+	overflow-x: hidden;
+}
+* {
+}
+.main-title {
+	color: var(--color-alt);
+	font-size: var(--fs-xxxl);
+}
+.button {
+	background-color: var(--color-main);
+	color: var(--color-alt);
+	font-size: var(--fs-lg);
+	padding: 16px;
+	margin: 16px;
+	border: 2px solid var(--color-alt);
+}
