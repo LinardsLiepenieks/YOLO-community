@@ -1,17 +1,21 @@
 :root {
 	/*salikt css mainīgos*/
 	--color-main: #404145;
+	--color-main-lt: #585a5f;
 	--color-alt: #fbffff;
 	--color-accent: #a1d0e9;
 	--color-accent-alt: #e79625;
 
-	-fs-xxxxl: 3.815rem;
+	--fs-xxxxl: 3.815rem;
 	--fs-xxxl: 3.052rem;
 	--fs-xxl: 2.441rem;
 	--fs-xl: 1.953rem;
 	--fs-lg: 1.563rem;
 	--fs-m: 1.25rem;
 	--fs-sm: 1rem;
+}
+html {
+	background-color: var(--color-main);
 }
 body {
 	font-family: sans-serif;
@@ -23,7 +27,13 @@ body {
 }
 .main-title {
 	color: var(--color-alt);
-	font-size: var(--fs-xxxl);
+	font-size: var(--fs-xxxxl);
+}
+h2 {
+	color: var(--color-alt);
+	font-weight: 500;
+	font-size: var(--fs-xxl);
+	margin: 24px 0;
 }
 .button {
 	background-color: var(--color-main);
@@ -32,4 +42,20 @@ body {
 	padding: 16px;
 	margin: 16px;
 	border: 2px solid var(--color-alt);
+	border-radius: 8px;
+}
+
+/*form elements*/
+label {
+	color: var(--color-alt);
+	font-size: var(--fs-lg);
+	font-weight: 200;
+	margin: 8px 0;
+}
+input {
+	background-color: var(--color-main);
+	font-size: var(--fs-xl);
+	margin: 4px 0;
+	border: 2px solid var(--color-alt);
+	border-radius: 8px;
 }

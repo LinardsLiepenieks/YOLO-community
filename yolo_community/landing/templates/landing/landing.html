@@ -10,14 +10,37 @@
 {%block content%}
 <main id="landing-container">
 	<section id="landing-section">
+		<div class="landing-content-container">
+			<!-- prettier-ignore -->
+			<img class="landing-content-bg" 
+				 src={% static "landing/svg/landing-blob-lg.svg"%} alt=""/>
+			<div class="landing-content">
+				<h1 class="main-title">
+					TEBUSLEILSVIRSRAKSTSAKTIKLOTILIELSUNVARBUTIESUZPRIEKSU
+				</h1>
+				<div class="sign-in-container">
+					<h2>Pieslēgties</h2>
+					<label>Lietotājvārds</label>
+					<input type="text" />
+					<label>Parole</label>
+					<input type="text" />
+					<a class="button">Pieslēgties</a>
+					<span>vai</span>
+					<a>Reģistrēties</a>
+				</div>
+			</div>
+		</div>
+		<div class="about-us-hint-container">
+			<!-- prettier-ignore -->
+			<img class="about-us-hint-bg" 
+				 src={% static "landing/svg/landing-blob-sm.svg"%} alt=""/>
+			<a id="about-us-btn" class="button">Par mums</a>
+		</div>
+
 		<div class="landing-img-container">
 			{% for image in landing_images%} {%load static%}
 			<img class="landing-bg-img" src="{{ image.landing_image.url }}" alt="" />
 			{%endfor%}
-		</div>
-
-		<div class="landing-content">
-			<img src={% static "landing/svg/hero-wave.svg"%}/>
 		</div>
 	</section>
 	<section id="about-section">
