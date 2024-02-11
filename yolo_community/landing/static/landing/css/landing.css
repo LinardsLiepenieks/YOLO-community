@@ -32,7 +32,9 @@ body {
 	z-index: 2;
 	filter: grayscale(20%) contrast(90%) blur(3px) brightness(64%);
 }
-
+.blob {
+	fill: red;
+}
 .landing-content-container {
 	height: 100%;
 	position: relative;
@@ -43,18 +45,47 @@ body {
 }
 .landing-content {
 	position: absolute;
-	top: 80px;
+	top: 112px;
 	left: 128px;
 }
+.hero-title {
+	font-size: var(--fs-hero);
+	-webkit-text-stroke: 4px var(--color-alt); /* Width and color of the outline */
+	-webkit-text-fill-color: white;
+	font-weight: bolder;
+
+	margin: 0;
+}
+.moto {
+	font-size: var(--fs-lg);
+	-webkit-text-stroke: 1px var(--color-alt); /* Width and color of the outline */
+
+	font-family: serif;
+	font-weight: 500;
+	padding: 0 24px;
+}
 .sign-in-container {
-	background-color: var(--color-main-lt);
-	width: 20%;
+	width: 360px;
 	padding: 24px;
 	border-radius: 16px;
 	display: flex;
 	flex-direction: column;
 }
-
+.sign-in-or {
+	color: var(--color-alt);
+	font-size: var(--fs-sm);
+	width: 100%;
+	text-align: center;
+	margin: 2px 0;
+	opacity: 75%;
+}
+.register-link {
+	color: var(--color-alt);
+	font-size: var(--fs-m);
+	margin: 8px 0;
+	width: 100%;
+	text-align: center;
+}
 .about-us-hint-container {
 	position: absolute;
 	right: 0px;
@@ -63,11 +94,11 @@ body {
 }
 #about-us-btn {
 	margin: 0;
-	font-size: var(--fs-xl);
+	font-size: var(--fs-xxl);
 	position: absolute;
 	z-index: 4;
-	bottom: 36%;
-	right: 12%;
+	top: 50%;
+	right: 20%;
 }
 
 /*about section*/

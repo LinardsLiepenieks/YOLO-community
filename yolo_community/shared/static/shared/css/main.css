@@ -1,11 +1,15 @@
 :root {
 	/*salikt css mainīgos*/
-	--color-main: #404145;
+	--color-main: #f1ead0;
+	--color-main-dk: #272d2d;
 	--color-main-lt: #585a5f;
-	--color-alt: #fbffff;
+	--color-alt: #110674;
+	--color-alt-dk: #060227;
 	--color-accent: #a1d0e9;
 	--color-accent-alt: #e79625;
 
+	--fs-hero: 9.314rem;
+	--fs-hero-sm: 7.45rem;
 	--fs-xxxxl: 3.815rem;
 	--fs-xxxl: 3.052rem;
 	--fs-xxl: 2.441rem;
@@ -36,15 +40,26 @@ h2 {
 	margin: 24px 0;
 }
 .button {
-	background-color: var(--color-main);
-	color: var(--color-alt);
+	background-color: var(--color-alt);
+	color: var(--color-main);
 	font-size: var(--fs-lg);
-	padding: 16px;
-	margin: 16px;
-	border: 2px solid var(--color-alt);
+	padding: 12px 0;
+	margin: 12px 0;
+	text-align: center;
 	border-radius: 8px;
+	border: 2px solid var(--color-alt);
+	transition: 0.4s all ease-in-out;
+}
+.button:hover {
+	cursor: pointer;
+	background-color: var(--color-alt-dk);
 }
 
+.link {
+	color: var(--color-alt);
+	margin: 12px 0;
+	border-bottom: 2px solid var(--color-alt);
+}
 /*form elements*/
 label {
 	color: var(--color-alt);
@@ -54,8 +69,11 @@ label {
 }
 input {
 	background-color: var(--color-main);
-	font-size: var(--fs-xl);
+	font-size: var(--fs-lg);
+	font-weight: 200;
 	margin: 4px 0;
-	border: 2px solid var(--color-alt);
-	border-radius: 8px;
+	padding: 10px 12px;
+	border: 0;
+	border-bottom: 2px solid var(--color-alt);
+	color: var(--color-alt);
 }
