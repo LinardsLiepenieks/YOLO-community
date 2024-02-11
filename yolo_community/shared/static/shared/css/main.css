@@ -1,12 +1,12 @@
 :root {
 	/*salikt css mainīgos*/
-	--color-main: #f1ead0;
+	--color-main: #efefec;
 	--color-main-dk: #272d2d;
 	--color-main-lt: #585a5f;
-	--color-alt: #110674;
+	--color-alt: #012a44;
 	--color-alt-dk: #060227;
-	--color-accent: #a1d0e9;
-	--color-accent-alt: #e79625;
+	--color-accent: #a13606;
+	--color-accent-alt: #29d400;
 
 	--fs-hero: 9.314rem;
 	--fs-hero-sm: 7.45rem;
@@ -33,26 +33,45 @@ body {
 	color: var(--color-alt);
 	font-size: var(--fs-xxxxl);
 }
-h2 {
+.text-light {
+	color: var(--color-main);
+}
+.text-dark {
 	color: var(--color-alt);
+}
+h2 {
 	font-weight: 500;
 	font-size: var(--fs-xxl);
 	margin: 24px 0;
 }
 .button {
-	background-color: var(--color-alt);
-	color: var(--color-main);
 	font-size: var(--fs-lg);
 	padding: 12px 0;
 	margin: 12px 0;
 	text-align: center;
 	border-radius: 8px;
-	border: 2px solid var(--color-alt);
 	transition: 0.4s all ease-in-out;
 }
+.button.dark {
+	background-color: var(--color-alt);
+	color: var(--color-main);
+	border: 2px solid var(--color-main);
+}
+.button.light {
+	background-color: var(--color-main);
+	color: var(--color-alt);
+	border: 2px solid var(--color-main);
+}
+.button.transp {
+	background-color: None;
+	color: var(--color-main);
+	border: 2px solid var(--color-main);
+}
+
 .button:hover {
 	cursor: pointer;
-	background-color: var(--color-alt-dk);
+	background-color: var(--color-main);
+	color: var(--color-alt);
 }
 
 .link {
@@ -62,18 +81,17 @@ h2 {
 }
 /*form elements*/
 label {
-	color: var(--color-alt);
 	font-size: var(--fs-lg);
 	font-weight: 200;
 	margin: 8px 0;
 }
 input {
-	background-color: var(--color-main);
+	background-color: transparent;
 	font-size: var(--fs-lg);
 	font-weight: 200;
 	margin: 4px 0;
 	padding: 10px 12px;
 	border: 0;
-	border-bottom: 2px solid var(--color-alt);
+	border-bottom: 2px solid var(--color-main);
 	color: var(--color-alt);
 }

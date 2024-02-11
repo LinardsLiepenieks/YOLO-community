@@ -11,9 +11,6 @@
 <main id="landing-container">
 	<section id="landing-section">
 		<div class="landing-content-container">
-			<!-- prettier-ignore -->
-			<img class="landing-content-bg" 
-				 src={% static "landing/svg/landing-blob-lg.svg"%} alt=""/>
 			<div class="landing-content">
 				<div class="hero-row">
 					<h1 class="hero-title">YoLo</h1>
@@ -25,7 +22,7 @@
 					<input type="text" />
 					<label>Parole:</label>
 					<input type="text" />
-					<a class="button">Pieslēgties</a>
+					<a class="button transp">Pieslēgties</a>
 					<span class="sign-in-or">vai</span>
 					<div class="register-link">
 						<a class="link">Izveidot profilu</a>
@@ -34,14 +31,9 @@
 			</div>
 		</div>
 		<div class="about-us-hint-container">
-			<!-- prettier-ignore -->
-			<img class="about-us-hint-bg" 
-				 src={% static "landing/svg/landing-blob-sm.svg"%} alt=""/>
-			<div>
-				<a id="about-us-btn" class="link">Par mums</a>
-			</div>
+			<a id="about-us-btn" class="link">Par mums</a>
 		</div>
-
+		<div class="landing-section-bg"></div>
 		<div class="landing-img-container">
 			{% for image in landing_images%} {%load static%}
 			<img class="landing-bg-img" src="{{ image.landing_image.url }}" alt="" />
