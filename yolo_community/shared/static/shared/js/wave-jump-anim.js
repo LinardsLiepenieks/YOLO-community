@@ -5,7 +5,6 @@ $(document).ready(function () {
 	const delayBetweenLetters = 100; // Delay between adding animation to each letter (in milliseconds)
 
 	function addAnimationToLetter(index) {
-		console.log(letters);
 		letters.each(function (index) {
 			const currentLetter = $(this);
 			if (currentLetter.text().trim() === " ") {

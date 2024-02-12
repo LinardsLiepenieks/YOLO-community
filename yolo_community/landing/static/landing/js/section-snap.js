@@ -11,6 +11,7 @@ $(document).ready(function () {
 	$("#landing-container").on("mousewheel", function (e) {
 		let scrollDirection = e.originalEvent.deltaY > 0 ? 1 : -1;
 		if (isSectionScrollable(scrollDirection) && !isAnimating) {
+			//free scroll for scrollable sections
 			let innerSection = sections.eq(curSection);
 			let currentScrollTop = innerSection.scrollTop();
 			let newScrollTop = currentScrollTop + scrollDirection * 250;
@@ -46,7 +47,7 @@ $(document).ready(function () {
 			// Dissolving animation between about slides
 			var currentSlide = aboutSlides.eq(aboutSlide);
 			var nextSlide = aboutSlides.eq(aboutSlide + scrollDirection);
-			nextSlide.css("display", "block");
+			nextSlide.css("display", "flex");
 			isAnimating = true;
 
 			// Fade out the current slide
@@ -80,13 +81,15 @@ $(document).ready(function () {
 			// Move to the next section
 			curSection += scrollDirection;
 			isAnimating = true;
+			console.log(navbar.height());
 			$("#landing-container")
 				.stop()
 				.animate(
 					{
 						scrollTop:
 							$("#landing-container").scrollTop() +
-							sections.eq(curSection).offset().top,
+							sections.eq(curSection).offset().top -
+							navbar.height(),
 					},
 					1000,
 					function () {
@@ -118,7 +121,26 @@ $(document).ready(function () {
 			overflowStyle == "auto scroll";
 		return (canScrollDown || canScrollUp) && isOverflowScroll;
 	}
-
+	$("#about-us-btn").on("click", function () {
+		// Move to the next section
+		curSection += 1;
+		isAnimating = true;
+		console.log(navbar.height());
+		$("#landing-container")
+			.stop()
+			.animate(
+				{
+					scrollTop:
+						$("#landing-container").scrollTop() +
+						sections.eq(curSection).offset().top -
+						navbar.height(),
+				},
+				1000,
+				function () {
+					isAnimating = false;
+				}
+			);
+	});
 	/*
 	//function in case wanna hide navbar - deprecated
 	function enableNavbar() {

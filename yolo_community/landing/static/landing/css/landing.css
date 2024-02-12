@@ -2,7 +2,7 @@ body {
 	overflow: hidden;
 }
 #landing-container {
-	height: 100%;
+	flex-grow: 1;
 	width: 100%;
 	overflow-y: scroll;
 	overflow-x: hidden;
@@ -154,7 +154,44 @@ body {
 }
 .about-us-slide.active {
 	z-index: -1;
+	display: flex;
+}
+.about-us-left {
+	width: 50%;
+	height: 100%;
+	background-color: var(--color-main);
+}
+
+.about-us-desc {
+	font-size: var(--fs-lg);
+}
+
+.about-us-right {
+	width: 50%;
+	height: 100%;
 	display: block;
+	background-color: var(--color-alt);
+}
+.about-us-inner {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+	height: 100%;
+	width: 100%;
+	padding: 112px 112px 64px 112px;
+}
+.about-us-img-container {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	filter: drop-shadow(16px -16px 2px #000000);
+}
+.about-us-img-container img {
+	height: 100%;
 }
 .about-1 {
 	background-color: red;
