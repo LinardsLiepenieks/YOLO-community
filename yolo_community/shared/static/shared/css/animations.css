@@ -23,7 +23,7 @@
 	display: block;
 }
 .text-jump span:hover {
-	animation: text-jump 0.4s ease-in-out;
+	animation: text-jump 0.4s ease;
 }
 @keyframes text-jump {
 	0%,
@@ -38,21 +38,52 @@
 		transform: translateY(-2px);
 	}
 }
+.text-rise {
+	transition: 0.2s all ease;
+}
+.text-rise:hover {
+	transform: translateY(-4px);
+}
 .text-rotate-up,
 .text-rotate-up > span > span,
 .text-rotate-up > img {
-	display: inline-block;
+	display: flex;
 	transition: all 0.4s ease;
 	transform: rotate(0);
 	text-wrap: nowrap;
 }
 
 .text-rotate-up:hover {
-	transform: rotate(90deg);
+	transform: rotate(8deg);
 }
 
 .text-rotate-up:hover span span,
 .text-rotate-up:hover img {
-	transform: rotate(-90deg);
+	transform: rotate(-8deg);
 	margin: 0px 16px;
+}
+
+.wave-animation > span > span {
+	display: inline-block;
+	transition: all 0.4s ease; /* Added transition for smoother effect */
+}
+.wave-animation-item {
+	animation: wave-animation 0.4s ease-in-out forwards;
+}
+@keyframes wave-animation {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-20px);
+	}
+}
+
+.space-out-text-anim span {
+	transition: all 0.4s ease;
+	margin-right: 0;
+}
+.space-out-text-anim:hover span {
+	margin-right: 25px;
 }

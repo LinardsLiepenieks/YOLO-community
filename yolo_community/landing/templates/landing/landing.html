@@ -25,20 +25,20 @@
 					<a class="button dark text-wiggle"><span>Pieslēgties</span></a>
 					<span class="sign-in-or">vai</span>
 					<div class="register-link">
-						<a class="link light text-jump"><span>Izveidot profilu</span></a>
+						<a class="link light text-rise"><span>Izveidot profilu</span></a>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="about-us-hint-container">
-			<a id="about-us-btn" class="link light text-rotate-up">
-				<span>
-					{% for letter in "Par mums" %} {% if letter == ' ' %}
-					<span>&nbsp;</span>
-					{% else %}
-					<span>{{ letter }}</span>
-					{% endif %} {% endfor %}
-				</span>
+			<a
+				id="about-us-btn"
+				class="link light space-out-text-anim wave-animation">
+				{% for letter in "Par mums" %} {% if letter == ' ' %}
+				<span>&nbsp;</span>
+				{% else %}
+				<span>{{ letter }}</span>
+				{% endif %} {% endfor %}
 				<img
 					id="about-us-arrow"
 					src="{%static 'landing/img/icons/about-us-arrow.png'%}" />
@@ -79,5 +79,6 @@
 
 <script src="{% static 'landing/js/landing-gallery.js' %}"></script>
 <script src="{% static 'landing/js/section-snap.js' %}"></script>
+<script src="{% static 'shared/js/wave-jump-anim.js' %}"></script>
 
 {%endblock%}

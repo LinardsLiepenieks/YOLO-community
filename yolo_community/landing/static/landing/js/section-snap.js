@@ -6,7 +6,7 @@ $(document).ready(function () {
 	var isAnimating = false;
 	var navBarOn = false;
 	var navbar = $("nav");
-	navbar.css("opacity", 0);
+	//navbar.css("opacity", 0);
 
 	$("#landing-container").on("mousewheel", function (e) {
 		let scrollDirection = e.originalEvent.deltaY > 0 ? 1 : -1;
@@ -94,7 +94,7 @@ $(document).ready(function () {
 					}
 				);
 		}
-		enableNavbar();
+		//enableNavbar();
 	});
 
 	function isSectionScrollable(scrollDirection) {
@@ -119,6 +119,8 @@ $(document).ready(function () {
 		return (canScrollDown || canScrollUp) && isOverflowScroll;
 	}
 
+	/*
+	//function in case wanna hide navbar - deprecated
 	function enableNavbar() {
 		if (curSection > 0) {
 			if (!navBarOn) {
@@ -128,4 +130,5 @@ $(document).ready(function () {
 			navbar.stop().animate({ opacity: 0 });
 		}
 	}
+	*/
 });

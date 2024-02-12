@@ -76,11 +76,11 @@ h2 {
 	margin: 12px 0;
 	display: inline-block;
 }
-.link.dark span {
+.link.dark {
 	border-bottom: 2px solid var(--color-alt);
 	color: var(--color-alt);
 }
-.link.light > span {
+.link.light {
 	border-bottom: 2px solid var(--color-main);
 	color: var(--color-main);
 }

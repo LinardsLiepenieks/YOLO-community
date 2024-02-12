@@ -2,14 +2,16 @@
 .navbar-position {
 	position: fixed;
 	width: 100%;
-	z-index: 999;
+	z-index: 6;
 }
 .navbar {
-	padding: 10px;
-	background-color: transparent;
+	padding: 8px 32px;
+	background-color: var(--color-main);
 	display: flex;
 }
-
+.nav-link {
+	margin: 0 16px;
+}
 .navbar-collapse {
 	display: flex;
 	flex-grow: 1;

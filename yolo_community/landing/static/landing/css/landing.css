@@ -114,12 +114,12 @@ body {
 	align-items: flex-end;
 	position: relative;
 	height: 100%;
-	margin-bottom: 264px;
+	margin-bottom: 360px;
 	flex-grow: 1;
 	z-index: 4;
 }
 #about-us-btn {
-	padding: 132px 0;
+	margin: 8px 0;
 	font-size: var(--fs-xxxxl);
 	color: var(--color-main);
 	border-color: var(--color-main);
@@ -127,7 +127,7 @@ body {
 	align-items: center;
 }
 #about-us-btn span {
-	font-size: 0;
+	display: flex;
 }
 #about-us-btn span span {
 	font-size: var(--fs-xxxxl);
