@@ -70,14 +70,22 @@ h2 {
 
 .button:hover {
 	cursor: pointer;
-	background-color: var(--color-main);
-	color: var(--color-alt);
 }
 
 .link {
-	color: var(--color-alt);
 	margin: 12px 0;
+	display: inline-block;
+}
+.link.dark span {
 	border-bottom: 2px solid var(--color-alt);
+	color: var(--color-alt);
+}
+.link.light > span {
+	border-bottom: 2px solid var(--color-main);
+	color: var(--color-main);
+}
+.link:hover {
+	cursor: pointer;
 }
 /*form elements*/
 label {
@@ -92,6 +100,15 @@ input {
 	margin: 4px 0;
 	padding: 10px 12px;
 	border: 0;
+}
+input.light {
 	border-bottom: 2px solid var(--color-main);
+	color: var(--color-main);
+}
+input.dark {
+	border-bottom: 2px solid var(--color-alt);
 	color: var(--color-alt);
+}
+input:focus {
+	outline: none;
 }

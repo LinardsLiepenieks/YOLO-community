@@ -19,19 +19,30 @@
 				<div class="sign-in-container">
 					<h2>Pieslēgties</h2>
 					<label>Lietotājvārds:</label>
-					<input type="text" />
+					<input class="light" type="text" />
 					<label>Parole:</label>
-					<input type="text" />
-					<a class="button transp">Pieslēgties</a>
+					<input class="light" type="text" />
+					<a class="button dark text-wiggle"><span>Pieslēgties</span></a>
 					<span class="sign-in-or">vai</span>
 					<div class="register-link">
-						<a class="link">Izveidot profilu</a>
+						<a class="link light text-jump"><span>Izveidot profilu</span></a>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="about-us-hint-container">
-			<a id="about-us-btn" class="link">Par mums</a>
+			<a id="about-us-btn" class="link light text-rotate-up">
+				<span>
+					{% for letter in "Par mums" %} {% if letter == ' ' %}
+					<span>&nbsp;</span>
+					{% else %}
+					<span>{{ letter }}</span>
+					{% endif %} {% endfor %}
+				</span>
+				<img
+					id="about-us-arrow"
+					src="{%static 'landing/img/icons/about-us-arrow.png'%}" />
+			</a>
 		</div>
 		<div class="landing-section-bg"></div>
 		<div class="landing-img-container">

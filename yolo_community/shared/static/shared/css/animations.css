@@ -1,0 +1,58 @@
+.text-wiggle span {
+	display: block;
+	transition: 0.4s all ease;
+}
+.text-wiggle:hover span {
+	animation: text-wiggle-anim 0.4s ease-in-out;
+}
+@keyframes text-wiggle-anim {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(4deg);
+	}
+	75% {
+		transform: rotate(-4deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+.text-jump span {
+	display: block;
+}
+.text-jump span:hover {
+	animation: text-jump 0.4s ease-in-out;
+}
+@keyframes text-jump {
+	0%,
+	50%,
+	100% {
+		transform: translateY(0);
+	}
+	20% {
+		transform: translateY(-4px);
+	}
+	75% {
+		transform: translateY(-2px);
+	}
+}
+.text-rotate-up,
+.text-rotate-up > span > span,
+.text-rotate-up > img {
+	display: inline-block;
+	transition: all 0.4s ease;
+	transform: rotate(0);
+	text-wrap: nowrap;
+}
+
+.text-rotate-up:hover {
+	transform: rotate(90deg);
+}
+
+.text-rotate-up:hover span span,
+.text-rotate-up:hover img {
+	transform: rotate(-90deg);
+	margin: 0px 16px;
+}
