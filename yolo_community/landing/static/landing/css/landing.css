@@ -143,6 +143,32 @@ body {
 	overflow: hidden;
 	position: relative;
 }
+.about-nav {
+	width: 64%;
+	position: absolute;
+	left: 18%;
+	top: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.about-read-bar {
+	width: 60%;
+	height: 8px;
+	border-radius: 64px;
+	overflow: hidden;
+	display: flex;
+}
+.read-bar-left {
+	width: 50%;
+	height: 100%;
+	background-color: var(--color-alt);
+}
+.read-bar-right {
+	width: 50%;
+	height: 100%;
+	background-color: var(--color-main);
+}
 .about-us-slide {
 	height: 100%;
 	width: 100%;
@@ -164,6 +190,9 @@ body {
 
 .about-us-desc {
 	font-size: var(--fs-lg);
+	flex-grow: 1;
+	overflow: hidden;
+	padding: 8px 0;
 }
 
 .about-us-right {
@@ -176,6 +205,9 @@ body {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+
+	display: flex;
+	flex-direction: column;
 
 	height: 100%;
 	width: 100%;
@@ -192,15 +224,6 @@ body {
 }
 .about-us-img-container img {
 	height: 100%;
-}
-.about-1 {
-	background-color: red;
-}
-.about-2 {
-	background-color: green;
-}
-.about-3 {
-	background-color: blue;
 }
 
 #contact-section {

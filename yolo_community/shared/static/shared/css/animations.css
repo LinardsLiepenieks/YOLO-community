@@ -87,3 +87,11 @@
 .space-out-text-anim:hover span {
 	margin-right: 25px;
 }
+
+.zoom-in-anim {
+	transition: 0.4s ease all;
+}
+.zoom-in-anim:hover {
+	cursor: pointer;
+	transform: scale(1.08);
+}

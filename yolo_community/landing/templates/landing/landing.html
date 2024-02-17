@@ -25,7 +25,7 @@
 					<a class="button dark text-wiggle"><span>Pieslēgties</span></a>
 					<span class="sign-in-or">vai</span>
 					<div class="register-link">
-						<a class="link light text-rise"><span>Izveidot profilu</span></a>
+						<a class="link light zoom-in-anim"><span>Izveidot profilu</span></a>
 					</div>
 				</div>
 			</div>
@@ -52,38 +52,38 @@
 		</div>
 	</section>
 	<section id="about-section">
-		<article class="about-us-slide about-1 active">
+		<div class="about-nav">
+			<img
+				id="about-us-left"
+				class="zoom-in-anim"
+				src="{%static 'landing/img/icons/about-us-arrow-dark.png'%}" />
+			<span class="about-read-bar">
+				<div class="read-bar-left"></div>
+				<div class="read-bar-right"></div>
+			</span>
+			<img
+				id="about-us-right"
+				class="zoom-in-anim"
+				src="{%static 'landing/img/icons/about-us-arrow.png'%}" />
+		</div>
+		{%for item in about_items%}
+		<article class="about-us-slide">
 			<div class="about-us-left">
 				<div class="about-us-inner">
-					<h2 class="text-dark">VIRSRAKSTS</h2>
-					<p class="text-dark about-us-desc">Lorem ipsum</p>
+					<h2 class="text-dark">{{item.title}}</h2>
+					<p class="text-dark about-us-desc">{{item.description}}</p>
 				</div>
 			</div>
 			<div class="about-us-right">
 				<div class="about-us-inner">
 					<div class="about-us-img-container">
-						<img src="{% static 'landing/img/img2.jpeg'%}" />
+						{%load static%}
+						<img class="" src="{{item.about_image}}" alt="No picture" />
 					</div>
 				</div>
 			</div>
 		</article>
-		<article class="about-us-slide about-2">
-			<div class="about-us-left">
-				<div class="about-us-inner">
-					<div class="about-us-img-container">
-						<img src="{% static 'landing/img/img_grave1.jpg'%}" />
-					</div>
-				</div>
-			</div>
-			<div class="about-us-right">
-				<div class="about-us-inner">
-					<div class="about-us-img-container">
-						<img src="{% static 'landing/img/img_grave1.jpg'%}" />
-					</div>
-				</div>
-			</div>
-		</article>
-		<article class="about-us-slide about-3"></article>
+		{%endfor%}
 	</section>
 	<section id="contact-section">
 		<div class="contact-container">

@@ -1,10 +1,10 @@
 $(document).ready(function () {
 	var sections = $("section");
 	var aboutSlides = $(".about-us-slide");
+	aboutSlides.eq(0).addClass("active");
 	var curSection = 0;
 	var aboutSlide = 0;
 	var isAnimating = false;
-	var navBarOn = false;
 	var navbar = $("nav");
 	//navbar.css("opacity", 0);
 
@@ -140,6 +140,41 @@ $(document).ready(function () {
 					isAnimating = false;
 				}
 			);
+	});
+	$("#about-us-right").on("click", function () {
+		// Dissolving animation between about slides
+		var currentSlide = aboutSlides.eq(aboutSlide);
+		var nextSlide = aboutSlides.eq(aboutSlide + 1);
+		nextSlide.css("display", "flex");
+		isAnimating = true;
+
+		// Fade out the current slide
+		currentSlide.animate(
+			{
+				opacity: 0,
+			},
+			500,
+			function () {
+				// Reset opacity and update aboutSlide
+				currentSlide
+					.css("opacity", 1)
+					.css("display", "none")
+					.removeClass("active");
+				aboutSlide += 1;
+				isAnimating = false;
+			}
+		);
+
+		// Fade in the next slide
+		nextSlide.animate(
+			{
+				opacity: 1,
+			},
+			500,
+			function () {
+				nextSlide.addClass("active");
+			}
+		);
 	});
 	/*
 	//function in case wanna hide navbar - deprecated
