@@ -65,9 +65,14 @@ h2 {
 	border: 2px solid var(--color-main);
 }
 .button.transp {
-	background-color: None;
+	background-color: transparent;
 	color: var(--color-main);
 	border: 2px solid var(--color-main);
+}
+.button.transpdark {
+	background-color: transparent;
+	color: var(--color-alt);
+	border: 2px solid var(--color-alt);
 }
 
 .button:hover {
@@ -113,4 +118,16 @@ input.dark {
 }
 input:focus {
 	outline: none;
+}
+
+textarea {
+	border-radius: 8px;
+	padding: 8px;
+	font-size: var(--fs-lg);
+	font-family: sans-serif;
+}
+textarea.transpdark {
+	background-color: transparent;
+	color: var(--color-alt);
+	border: 2px solid var(--color-alt);
 }

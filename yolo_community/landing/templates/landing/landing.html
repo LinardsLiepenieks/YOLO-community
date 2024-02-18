@@ -53,18 +53,16 @@
 	</section>
 	<section id="about-section">
 		<div class="about-nav">
-			<img
-				id="about-us-left"
-				class="zoom-in-anim"
-				src="{%static 'landing/img/icons/about-us-arrow-dark.png'%}" />
+			<a id="about-us-left-btn" class="zoom-in-anim">
+				<img src="{%static 'landing/img/icons/about-us-arrow-dark.png'%}" />
+			</a>
 			<span class="about-read-bar">
 				<div class="read-bar-left"></div>
 				<div class="read-bar-right"></div>
 			</span>
-			<img
-				id="about-us-right"
-				class="zoom-in-anim"
-				src="{%static 'landing/img/icons/about-us-arrow.png'%}" />
+			<a id="about-us-right-btn" class="zoom-in-anim">
+				<img src="{%static 'landing/img/icons/about-us-arrow.png'%}" />
+			</a>
 		</div>
 		{%for item in about_items%}
 		<article class="about-us-slide">
@@ -87,15 +85,32 @@
 	</section>
 	<section id="contact-section">
 		<div class="contact-container">
-			<h2>Pievienojies mums!</h2>
-			<div class="socials-row">
-				{%for item in social_items%}
-				<a class="socials-item">
-					{%load static%}
-					<img class="" src="{{item.social_image}}" alt="No picture" />
-				</a>
-				{%endfor%}
-			</div>
+			<h2 class="text-dark">Kontakti:</h2>
+			<div style="display: flex;">
+				<div style="width: 60%;">
+					<div class="socials-row">
+						{%for item in social_items%}
+						<a class="socials-item zoom-in-anim">
+							{%load static%}
+							<img class="" src="{{item.social_image}}" alt="No picture" />
+						</a>
+						{%endfor%}
+					</div>
+					<h4 class="about-info-text text-dark">Epasts: <span>epasts@epasts.lv</span></h4>
+					<h4 class="about-info-text text-dark">Telefons: <span>+371 20202020</h4>
+					<h4 class="about-info-text text-dark">Adrese: <span> Ielas iela 7</span></h4>
+				</div>
+				<div style="flex-grow: 1; display: flex; flex-direction: column;">
+					<h4 class="write-us-title text-dark">Uzraksti mums!</h4>
+					<form class="write-us-form">
+						<input class="dark"type="text" placeholder="epasts"/>
+						<textarea style="flex-grow: 1;" class="textarea transpdark"></textarea>
+						<div>
+							<button class="button transpdark text-wiggle" style="padding: 8px 16px;" type="submit"><span>Sūtīt</span></button>
+						</div>
+					</form>
+				</div>
+		</div>
 		</div>
 		<footer id="landing-footer">sdffsdfds</footer>
 	</section>
