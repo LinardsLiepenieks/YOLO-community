@@ -156,6 +156,14 @@ $(document).ready(function () {
 		}
 		moveSection(1);
 	});
+	$("#about-us-btn-nav").on("click", function () {
+		// Move to the next section
+		if (isAnimating || curSection == 1) {
+			return;
+		}
+		curSection = 0;
+		moveSection(1);
+	});
 	$("#about-us-right-btn").on("click", function () {
 		if (isAnimating) {
 			return;

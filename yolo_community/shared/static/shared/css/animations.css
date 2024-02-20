@@ -89,9 +89,9 @@
 }
 
 .zoom-in-anim {
-	transition: 0.4s ease all;
+	transition: 0.2s all ease;
 }
 .zoom-in-anim:hover {
 	cursor: pointer;
-	transform: scale(1.08);
+	transform: scale(1.16);
 }

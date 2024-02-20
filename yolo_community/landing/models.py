@@ -33,6 +33,7 @@ class Social_item(models.Model):
     title = models.CharField(max_length=255)
     social_image = models.FileField(
         upload_to='landing/static/landing/img/socials')
+    link = models.CharField(max_length=255)
     created_at = models.DateField(auto_now_add=True)
     edited_at = models.DateField(auto_now=True)
     

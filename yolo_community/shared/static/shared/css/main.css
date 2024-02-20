@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 :root {
 	/*salikt css mainīgos*/
 	--color-main: #efefec;
@@ -17,12 +19,14 @@
 	--fs-lg: 1.563rem;
 	--fs-m: 1.25rem;
 	--fs-sm: 1rem;
+	--fs-xs: 0.8rem;
 }
+
 html {
 	background-color: var(--color-main);
 }
 body {
-	font-family: sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	height: 100vh;
 	margin: 0;
 	overflow-x: hidden;
@@ -43,8 +47,8 @@ body {
 }
 h2 {
 	font-weight: 500;
-	font-size: var(--fs-xxl);
-	margin: 24px 0;
+	font-size: var(--fs-xxxl);
+	margin: 16px 0;
 }
 .button {
 	font-size: var(--fs-lg);
@@ -96,16 +100,18 @@ h2 {
 }
 /*form elements*/
 label {
-	font-size: var(--fs-lg);
+	font-size: var(--fs-xl);
 	font-weight: 200;
 	margin: 8px 0;
 }
 input {
 	background-color: transparent;
+	font-family: "Noto Sans", sans-serif;
+
 	font-size: var(--fs-lg);
-	font-weight: 200;
-	margin: 4px 0;
-	padding: 10px 12px;
+	font-weight: 300;
+	margin: 0px 0 12px 0;
+	padding: 10px 4px;
 	border: 0;
 }
 input.light {
@@ -125,6 +131,9 @@ textarea {
 	padding: 8px;
 	font-size: var(--fs-lg);
 	font-family: sans-serif;
+}
+textarea:focus {
+	outline: none;
 }
 textarea.transpdark {
 	background-color: transparent;

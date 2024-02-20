@@ -15,6 +15,10 @@
 		<link
 			rel="stylesheet"
 			type="text/css"
+			href="{% static 'shared/css/footer.css'%}" />
+		<link
+			rel="stylesheet"
+			type="text/css"
 			href="{% static 'shared/css/animations.css'%}" />
 		<!---page css-->
 		{%block page_css%}{%endblock%}
@@ -29,7 +33,12 @@
 				<div class="navbar-collapse" id="navbarNav">
 					<ul class="navbar-nav">
 						<li class="nav-item active">
-							<a class="nav-link link dark text-rise" href="#">Par mums</a>
+							<a
+								id="about-us-btn-nav"
+								class="nav-link link dark text-rise"
+								href="#"
+								>Par mums</a
+							>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link link dark text-rise" href="#">Pieslēgties</a>

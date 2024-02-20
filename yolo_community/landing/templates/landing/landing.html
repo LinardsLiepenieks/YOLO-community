@@ -10,18 +10,27 @@
 {%block content%}
 <main id="landing-container">
 	<section id="landing-section">
+		<div class="landing-img-container">
+			{% for image in landing_images%} {%load static%}
+			<img class="landing-bg-img" src="{{ image.landing_image.url }}" alt="" />
+			{%endfor%}
+		</div>
+		
+		<div class="landing-section-bg"></div>
 		<div class="landing-content-container">
 			<div class="landing-content">
 				<div class="hero-row">
-					<h1 class="hero-title">YoLo</h1>
+					<h1 id="hero-title">YoLo</h1>
+					<!-- vai vajag?
+					<span class="moto">Te būs mājaslapas sauklis</span>
+					-->
 				</div>
-				<span class="moto">Te būs mājaslapas sauklis</span>
 				<div class="sign-in-container">
 					<h2>Pieslēgties</h2>
 					<label>Lietotājvārds:</label>
 					<input class="light" type="text" />
 					<label>Parole:</label>
-					<input class="light" type="text" />
+					<input class="light" type="password" />
 					<a class="button dark text-wiggle"><span>Pieslēgties</span></a>
 					<span class="sign-in-or">vai</span>
 					<div class="register-link">
@@ -33,7 +42,7 @@
 		<div class="about-us-hint-container">
 			<a
 				id="about-us-btn"
-				class="link light space-out-text-anim wave-animation">
+				class="link light zoom-in-anim wave-animation">
 				{% for letter in "Par mums" %} {% if letter == ' ' %}
 				<span>&nbsp;</span>
 				{% else %}
@@ -44,12 +53,7 @@
 					src="{%static 'landing/img/icons/about-us-arrow.png'%}" />
 			</a>
 		</div>
-		<div class="landing-section-bg"></div>
-		<div class="landing-img-container">
-			{% for image in landing_images%} {%load static%}
-			<img class="landing-bg-img" src="{{ image.landing_image.url }}" alt="" />
-			{%endfor%}
-		</div>
+		
 	</section>
 	<section id="about-section">
 		<div class="about-nav">
@@ -90,7 +94,7 @@
 				<div style="width: 60%;">
 					<div class="socials-row">
 						{%for item in social_items%}
-						<a class="socials-item zoom-in-anim">
+						<a class="socials-item zoom-in-anim" href={{item.link}}>
 							{%load static%}
 							<img class="" src="{{item.social_image}}" alt="No picture" />
 						</a>
@@ -112,8 +116,8 @@
 				</div>
 		</div>
 		</div>
-		<footer id="landing-footer">sdffsdfds</footer>
-	</section>
+		{% include 'shared/footer.html'%}	
+</section>
 </main>
 
 {%endblock%}

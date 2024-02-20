@@ -1,0 +1,33 @@
+<footer id="landing-footer">
+	<div class="footer-section">
+		<div class="footer-logo-container">YOLO LOGO</div>
+		<span id="footer-logo-text">
+			<span> © 2017 - 2024 </span>
+			<a class="link light">Privacy policy</a>
+			<a class="link light">Manage cookies</a>
+		</span>
+	</div>
+	<div class="footer-section">
+		<div class="footer-title">Kontakti</div>
+		<span class="footer-info">
+			Kautkāds atbildīgais:
+			<span>+371 20202020</span>
+		</span>
+		<span class="footer-info">
+			Kautkāds atbildīgais2:
+			<span>+371 20202020</span>
+		</span>
+		<span class="footer-info">Adrese <span>Ielas iela 7</span></span>
+	</div>
+	<div class="footer-section">
+		<span class="footer-title">Seko mums!</span>
+		<div class="footer-socials">
+			{%for item in social_items%}
+			<a class="footer-social-item zoom-in-anim" href="{{item.link}}">
+				{%load static%}
+				<img class="" src="{{item.social_image}}" alt="No picture" />
+			</a>
+			{%endfor%}
+		</div>
+	</div>
+</footer>
