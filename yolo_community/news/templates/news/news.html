@@ -1,0 +1,45 @@
+{% extends "shared/base.html"%}
+<!--css-->
+{%block page_css%} {%load static%}
+<link
+	rel="stylesheet"
+	type="text/css"
+	href="{% static 'news/css/news.css'%}" />
+
+{%endblock%}
+
+{%block content%}
+<main>
+    <section class="newsfeed">
+        <div class="header">
+            <h1 class="title">Jaunumi:</h1>
+        </div>
+    {% for news_article in all_news %}
+        <article class="news_article">  
+            <h2>{{ news_article.title }}</h2>
+            <span class="created_at"><i>{{ news_article.created_at|date:"d.m.Y" }}</i></span>
+            <p>{{ news_article.content|linebreaks }}</p>
+            <div class="article_img_container">
+            {% for news_image in news_article.images.all %} {%load static%}
+                <img src="{{ news_image.news_image.url }}" alt="Image for {{ news_article.title }}">
+            {% endfor %}
+            </div>
+            {% if news_article.images.count > 1 %}
+            <div class="article_img_gallery">
+                {% for news_image in news_article.images.all %} {%load static%}
+                <div class="gallery_img_container">
+                    <img src="{{ news_image.news_image.url }}" alt="Image for {{ news_article.title }}">
+                </div>
+                {% endfor %}
+                </div>
+            </div>
+            {%endif%}
+
+        </article>
+    {% endfor %}
+    </section>
+</main>
+{%endblock%}
+
+{%block page_js%}
+{%endblock%}

@@ -45,6 +45,11 @@ body {
 .text-dark {
 	color: var(--color-alt);
 }
+h1 {
+	font-weight: 500;
+	font-size: var(--fs-xxxxl);
+	margin: 16px 0;
+}
 h2 {
 	font-weight: 500;
 	font-size: var(--fs-xxxl);
