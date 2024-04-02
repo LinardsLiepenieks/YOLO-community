@@ -2,10 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 :root {
 	/*salikt css mainīgos*/
-	--color-main: #efefec;
+	--color-main: #eeeeeb;
 	--color-main-dk: #272d2d;
 	--color-main-lt: #585a5f;
-	--color-alt: #012a44;
+	--color-alt: #000000;
 	--color-alt-dk: #060227;
 	--color-accent: #a13606;
 	--color-accent-alt: #29d400;
@@ -20,20 +20,20 @@
 	--fs-m: 1.25rem;
 	--fs-sm: 1rem;
 	--fs-xs: 0.8rem;
+
 }
 
 html {
 	background-color: var(--color-main);
+	scroll-behavior: smooth;
 }
 body {
 	font-family: "Noto Sans", sans-serif;
-	height: 100vh;
+	scroll-behavior: smooth;
 	margin: 0;
+	padding: 0;
+	border: 0;
 	overflow-x: hidden;
-	display: flex;
-	flex-direction: column;
-}
-* {
 }
 .main-title {
 	color: var(--color-alt);
@@ -91,13 +91,15 @@ h2 {
 .link {
 	margin: 12px 0;
 	display: inline-block;
+	text-decoration: underline;
+	text-decoration-thickness: 1px; 
+    text-underline-offset: 3px; 
+
 }
 .link.dark {
-	border-bottom: 2px solid var(--color-alt);
 	color: var(--color-alt);
 }
 .link.light {
-	border-bottom: 2px solid var(--color-main);
 	color: var(--color-main);
 }
 .link:hover {

@@ -1,0 +1,11 @@
+@media only screen and (max-width: 767px) {
+  .about-us-slide.active {
+    display: block !important; /* Override display property to block for phone-sized screens */
+  }
+  .about-us-left {
+	width: 100%;
+}
+  .about-us-right {
+	width: 100%;
+}
+}

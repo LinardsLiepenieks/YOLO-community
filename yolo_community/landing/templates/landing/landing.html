@@ -5,6 +5,10 @@
 	rel="stylesheet"
 	type="text/css"
 	href="{% static 'landing/css/landing.css'%}" />
+<link
+	rel="stylesheet"
+	type="text/css"
+	href="{% static 'landing/css/media-queries.css'%}" />
 {%endblock%}
 <!--template-->
 {%block content%}
@@ -17,14 +21,14 @@
 		</div>
 		
 		<div class="landing-section-bg"></div>
+		<div class="landing-hero-container">
+			<div class="hero-content-container">
+			<h1 id="hero-title">VIRSRAKSTS</h1>
+			<span class="moto">Kautkāds apraksts</span>
+			</div>
+		</div>
 		<div class="landing-content-container">
 			<div class="landing-content">
-				<div class="hero-row">
-					<h1 id="hero-title">YoLo</h1>
-					<!-- vai vajag?
-					<span class="moto">Te būs mājaslapas sauklis</span>
-					-->
-				</div>
 				<div class="sign-in-container">
 					<h2>Pieslēgties</h2>
 					<label>Lietotājvārds:</label>
@@ -39,10 +43,12 @@
 				</div>
 			</div>
 		</div>
+		<!--
 		<div class="about-us-hint-container">
 			<a
 				id="about-us-btn"
-				class="link light zoom-in-anim wave-animation">
+				class="link light zoom-in-anim wave-animation"
+				href="#about-section">
 				{% for letter in "Par mums" %} {% if letter == ' ' %}
 				<span>&nbsp;</span>
 				{% else %}
@@ -53,6 +59,7 @@
 					src="{%static 'landing/img/icons/about-us-arrow.png'%}" />
 			</a>
 		</div>
+-->
 		
 	</section>
 	<section id="about-section">
@@ -125,7 +132,8 @@
 <!--page-specific-js-->
 {%block page_js%}
 
-<script src="{% static 'landing/js/landing-gallery.js' %}"></script>
+<!-- jāsalabo bet vajag bildes
+<script src="{% static 'landing/js/landing-gallery.js' %}"></script>-->
 <script src="{% static 'landing/js/section-snap.js' %}"></script>
 <script src="{% static 'shared/js/wave-jump-anim.js' %}"></script>
 
