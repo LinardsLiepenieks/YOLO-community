@@ -64,35 +64,35 @@
 	</section>
 	<section id="about-section">
 		<div class="about-nav">
-			<a id="about-us-left-btn" class="zoom-in-anim">
-				<img src="{%static 'landing/img/icons/about-us-arrow-dark.png'%}" />
+			<a id="about-us-left-btn" class="zoom-in-anim about-nav-btn">
+				<img src="{%static 'landing/img/icons/about-us-arrow.png'%}" />
 			</a>
 			<span class="about-read-bar">
-				<div class="read-bar-left"></div>
-				<div class="read-bar-right"></div>
+				<div id="readBar" class="read-bar-content"></div>
 			</span>
-			<a id="about-us-right-btn" class="zoom-in-anim">
+			<a id="about-us-right-btn" class="zoom-in-anim about-nav-btn">
 				<img src="{%static 'landing/img/icons/about-us-arrow.png'%}" />
 			</a>
 		</div>
-		{%for item in about_items%}
-		<article class="about-us-slide">
-			<div class="about-us-left">
-				<div class="about-us-inner">
-					<h2 class="text-dark">{{item.title}}</h2>
-					<p class="text-dark about-us-desc">{{item.description}}</p>
+		<div class="about-slide-img-container">
+			{%for item in about_items%}
+			<img src="{{item.about_image}}">
+			{%endfor%}
+		</div>
+		<div class="about-slide-content">
+			<div class="about-slide-content-bg"></div>
+
+			{%for item in about_items%}
+			<div class="about-slide-content-box">
+				<h1><span>{{item.title}}</span></h1>
+				<div class="about-desc">
+				<span>{{item.description}}</span>
 				</div>
 			</div>
-			<div class="about-us-right">
-				<div class="about-us-inner">
-					<div class="about-us-img-container">
-						{%load static%}
-						<img class="" src="{{item.about_image}}" alt="No picture" />
-					</div>
-				</div>
-			</div>
-		</article>
-		{%endfor%}
+			{%endfor%}
+		</div>
+		<div class="curtain-left" id="curtainLeft"></div>
+		<div class="curtain-right" id="curtainRight"></div>
 	</section>
 	<section id="contact-section">
 		<div class="contact-container">
