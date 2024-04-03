@@ -30,7 +30,6 @@
 }
 .landing-content-container {
 	height: 100%;
-	box-sizing: content-box;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -185,7 +184,7 @@ height: 960px;
 .about-nav {
 	width: 64%;
 	left: 18%;
-	top: 16px;
+	top: 64px;
 	z-index: 98;
 	display: flex;
 	align-items: center;
@@ -257,25 +256,30 @@ height: 960px;
 }
 .about-slide-content-box h1 span{
 	font-size: var(--fs-xxxxl);
-	background-color: var(--color-alt);
+	padding: 16px 32px;
+	font-weight: 500;
+	text-shadow: 4px 2px 8px var(--color-alt);
 
-	font-weight: 300;
 }
 .about-desc{
 	font-size: var(--fs-xl);
-	text-align: center;
-	max-height: 40%;
-	overflow-y: auto;
 	font-weight: 300;
 }
-::-webkit-scrollbar-track {
-    background-color: red !important; /* Color of the scrollbar track */
-}
+
 
 .about-desc span {
+	text-align: center;
     color: var(--color-main);
-	padding: 2px 4px;
-    background-color: var(--color-alt);
+	background-color: var(--color-alt);
+	    font-style: italic;
+
+	padding: 16px 32px;
+	max-height: 300px;
+	overflow-y: hidden;
+	font-weight: 300;
+	text-shadow: 4px 4px 8px var(--color-alt);
+
+	display: block;
 }
 
 .about-slide-content-bg{

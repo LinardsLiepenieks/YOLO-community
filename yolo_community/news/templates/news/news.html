@@ -18,12 +18,20 @@
         <article class="news_article">  
             <h2>{{ news_article.title }}</h2>
             <span class="created_at"><i>{{ news_article.created_at|date:"d.m.Y" }}</i></span>
-            <p>{{ news_article.content|linebreaks }}</p>
-            <div class="article_img_container">
-            {% for news_image in news_article.images.all %} {%load static%}
-                <img src="{{ news_image.news_image.url }}" alt="Image for {{ news_article.title }}">
-            {% endfor %}
+            <div class="content-container">
+                <div class="content-container-inner">
+                    {{ news_article.content|linebreaks }}
+                    <button class="read-more-btn">Lasīt vairāk...</button>
+                </div>
             </div>
+            {% if news_article.images.exists %}
+            <div class="article_img_container">
+                {% with first_image=news_article.images.first %}
+                    {% load static %}
+                    <img src="{{ first_image.news_image.url }}" alt="Image for {{ news_article.title }}">
+                {% endwith %}
+            </div>
+            {% endif %}
             {% if news_article.images.count > 1 %}
             <div class="article_img_gallery">
                 {% for news_image in news_article.images.all %} {%load static%}
@@ -42,4 +50,7 @@
 {%endblock%}
 
 {%block page_js%}
+    <script src="{% static 'news/js/read-more.js' %}"></script>
+    <script src="{% static 'news/js/news-gallery.js' %}"></script>
+
 {%endblock%}
